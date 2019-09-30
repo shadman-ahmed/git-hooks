@@ -11,7 +11,7 @@ BRANCH_EXCLUDED=$(printf "%s\n" "${BRANCHES_TO_SKIP[@]}" | \
 	grep -c "^$BRANCH_NAME$")
 
 # Get the issue number from the branch 
-ISSUE_NUMBER=$(echo $BRANCH_NAME | grep -o '\<[[:alpha:]]*\-[[:digit:]]*\>')
+ISSUE_NUMBER=$(echo $BRANCH_NAME | grep -o '\<[[:upper:]]*\-[[:digit:]]*\>')
 
 # If it isn't excluded, preprend the trimmed branch identifier to the given 
 # message
